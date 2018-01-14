@@ -49,7 +49,7 @@ public class DetailActivity extends AppCompatActivity {
             String mimeType = "text/plain";
             String title = "Share forecast details";
             ShareCompat.IntentBuilder.from(DetailActivity.this)
-                    .setChooserTitle(title)
+                    .setChooserTitle(title + FORECAST_SHARE_HASHTAG)
                     .setType(mimeType)
                     .setText(mForecast)
                     .startChooser();;

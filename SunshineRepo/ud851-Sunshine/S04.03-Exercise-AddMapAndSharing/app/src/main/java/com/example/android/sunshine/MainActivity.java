@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
             double[] coordinates = SunshinePreferences.getDefaultWeatherCoordinates();
             Uri.Builder builder = new Uri.Builder();
             builder.scheme("geo")
-                    .path(String.valueOf(coordinates[0]) + "," + String.valueOf(coordinates[1]));
+                    .appendEncodedPath(String.valueOf(coordinates[0]) + "," + String.valueOf(coordinates[1]));
             Uri locationUri = builder.build();
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(locationUri);
