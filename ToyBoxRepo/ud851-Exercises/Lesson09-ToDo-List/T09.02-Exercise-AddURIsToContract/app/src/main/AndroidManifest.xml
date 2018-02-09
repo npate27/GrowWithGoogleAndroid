@@ -21,7 +21,7 @@
         </activity>
 
         <!-- AddTaskActivity -->
-        <activity
+        <activitycon
             android:name="com.example.android.todolist.AddTaskActivity"
             android:label="@string/add_task_activity_name" />
 
