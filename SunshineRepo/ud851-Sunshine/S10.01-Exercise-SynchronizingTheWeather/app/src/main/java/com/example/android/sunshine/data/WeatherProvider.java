@@ -112,7 +112,8 @@ public class WeatherProvider extends ContentProvider {
      * provider turns out not to be needed, and stops database errors (such as a full disk) from
      * halting application launch.
      *
-     * @return true if the provider was successfully loaded, false otherwise
+     * @return true if the provider was successfully loadepackage com.example.android.sunshine.sync;
+d, false otherwise
      */
     @Override
     public boolean onCreate() {

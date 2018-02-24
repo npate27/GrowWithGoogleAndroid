@@ -31,6 +31,14 @@ public final class SunshinePreferences {
     public static final String PREF_COORD_LAT = "coord_lat";
     public static final String PREF_COORD_LONG = "coord_long";
 
+
+    public static boolean areNotifcationsEnabled(Context context){
+        boolean defaultSetting = context.getResources().getBoolean(R.bool.notification_preference);
+        String currentSettingKey = context.getString(R.string.pref_enable_notifications_key);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return sharedPreferences.getBoolean(currentSettingKey, defaultSetting);
+    }
+
     /**
      * Helper method to handle setting location details in Preferences (city name, latitude,
      * longitude)
